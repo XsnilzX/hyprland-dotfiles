@@ -1,0 +1,93 @@
+configuration {
+    font: "JetBrainsMono Nerd Font 14";
+    dpi: 110;
+    terminal: "ghostty";
+    show-icons: true;
+    icon-theme: "Papirus";
+    display-drun: "";
+    display-run: "";
+    display-window: "";
+    drun-display-format: "{name}";
+}
+
+* {
+    bg: #1e1e2e;
+    bg-alt: #313244;
+    fg: #cdd6f4;
+    fg-alt: #585b70;
+
+    accent: #f38ba8;
+    urgent: #f38ba8;
+
+    background-color: @bg;
+    text-color: @fg;
+
+    border: 0;
+    margin: 0;
+    padding: 0;
+    spacing: 0;
+}
+
+window {
+    width: 30%;
+    background-color: #1e1e2e;
+    border-radius: 10px;
+}
+
+element {
+    padding: 8 12;
+    background-color: rgba(30, 30, 46, 0.7);  /* Dunklerer Hintergrund */
+    text-color: #a6adc8;  /* Gedämpftere Textfarbe */
+}
+
+element selected {
+    background-color: #313244;
+    text-color: #cdd6f4;  /* Hellere Textfarbe für ausgewählte Elemente */
+    border-radius: 5px;
+}
+
+element-text {
+    background-color: transparent;
+    text-color: inherit;
+    vertical-align: 0.5;
+}
+
+element-icon {
+    size: 25;
+    padding: 0 10 0 0;
+    background-color: transparent;
+}
+
+entry {
+    padding: 12;
+    background-color: @bg-alt;
+    text-color: @fg;
+    border-radius: 5px;
+}
+
+inputbar {
+    children: [prompt, entry];
+    padding: 12;
+    background-color: @bg;
+}
+
+listview {
+    padding: 8 12;
+    background-color: @bg;
+    columns: 1;
+    lines: 8;
+}
+
+mainbox {
+    children: [inputbar, listview];
+    background-color: @bg;
+}
+
+prompt {
+    enabled: true;
+    padding: 12 0 0 12;
+    background-color: @bg-alt;
+    text-color: @fg;
+}
+
+@theme "/home/richard/.config/rofi/themes/rounded-blue-dark.rasi"

@@ -1,0 +1,40 @@
+[global]
+monitor = 0
+follow = mouse
+width = (300, 800)
+height = 300
+origin = top-right
+offset = 10x50
+progress_bar = true
+
+# Transparenz & Farben
+transparency = 10
+frame_width = 2
+frame_radius = 10   # Abgerundete Ecken
+frame_color = "#585b70"  # Separator-Farbe aus Waybar
+separator_color = "#585b70"
+padding = 8
+horizontal_padding = 16
+
+# Schriftart
+font = "JetBrainsMono Nerd Font 14"
+
+# Standard-Icons
+icon_path = /usr/share/icons/
+
+# Dringlichkeiten-Styling
+[urgency_low]
+background = "#1e1e2e"
+foreground = "#cdd6f4"
+timeout = 10
+
+[urgency_normal]
+background = "#2b2b3b"
+foreground = "#cdd6f4"
+timeout = 5
+
+[urgency_critical]
+background = "#eb937d"  # Farbe für extreme Wetterlagen
+foreground = "#ffffff"
+frame_color = "#ff0000"
+timeout = 0  # Bleibt stehen
