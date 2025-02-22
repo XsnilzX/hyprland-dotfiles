@@ -14,7 +14,7 @@ Diese Repository enthält Konfigurationsdateien für:
 - Hyprpaper (Wallpaper)
 - WLogout (Logout Menu)
 - Hypridle ()
-- 
+- Cliphist (Clipboard Manager)
 
 ## 🚀 Installation
 
@@ -56,11 +56,11 @@ Stelle sicher, dass folgende Pakete installiert sind:
 - wlogout
 - hyprpaper
 - hypridle
-- 
+- cliphist
 
 Für Arch Linux:
 ```bash
-paru -S hyperland waybar rofi ghostty dunst wlogout hyprpaper
+paru -S hyperland waybar rofi ghostty dunst wlogout hyprpaper cliphist
 ```
 
 ## 🎨 Anpassung

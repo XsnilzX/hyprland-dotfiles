@@ -86,4 +86,11 @@
     "tooltip-format": "{}",
     "interval": 5,
   },
+  "custom/clipboard": {
+    "exec": "/home/richard/.config/waybar/scripts/cliphist-tray.py",
+    "on-click": "/home/richard/.config/waybar/scripts/cliphist-tray.py --click",
+    "tooltip": true,
+    "return-type": "json",
+    "interval": 5,
+  },
 }
