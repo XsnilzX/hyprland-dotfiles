@@ -54,7 +54,7 @@ def show_selection_window():
     root = tk.Tk()
     root.title("Cliphist History")
     root.attributes("-type", "dialog")  # Fenstertyp als Dialog
-    root.geometry("600x400")  # Größeres Fenster (Breite x Höhe)
+    root.geometry("800x550")  # Größeres Fenster (Breite x Höhe)
 
     # Darkmode-Farben
     bg_color = "#2d2d2d"  # Dunkler Hintergrund
@@ -65,16 +65,16 @@ def show_selection_window():
     root.configure(bg=bg_color)
     style = ttk.Style(root)
     style.theme_use("clam")  # Ein einfaches, anpassbares Theme
-    style.configure("TListbox", background=bg_color, foreground=fg_color, selectbackground=highlight_color, selectforeground=fg_color, font=("Arial", 14))
+    style.configure("TListbox", background=bg_color, foreground=fg_color, selectbackground=highlight_color, selectforeground=fg_color, font=("JetBrainsMono Nerd Font", 14))
     style.configure("TFrame", background=bg_color)
     style.configure("TLabel", background=bg_color, foreground=fg_color)
 
     # Frame für die Liste
     frame = ttk.Frame(root)
-    frame.pack(fill=tk.BOTH, expand=True, padx=10, pady=10)  # Abstand zum Fensterrand
+    frame.pack(fill=tk.BOTH, expand=True, padx=4, pady=4)  # Abstand zum Fensterrand
 
     # Liste der Einträge
-    listbox = tk.Listbox(frame, selectmode=tk.SINGLE, bg=bg_color, fg=fg_color, selectbackground=highlight_color, selectforeground=fg_color, font=("Arial", 14))
+    listbox = tk.Listbox(frame, selectmode=tk.SINGLE, bg=bg_color, fg=fg_color, selectbackground=highlight_color, selectforeground=fg_color, font=("JetBrainsMono Nerd Font", 14))
     listbox.pack(fill=tk.BOTH, expand=True)
     listbox.focus_set()  # Fokus auf die Listbox setzen
 

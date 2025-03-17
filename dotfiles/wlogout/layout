@@ -1,6 +1,6 @@
 {
     "label" : "lock",
-    "action" : "hyprlock",
+    "action" : "hyprlock -c /home/richard/.config/hypr/hyperlock.conf",
     "text" : "Sperren",
     "keybind" : "l"
 }

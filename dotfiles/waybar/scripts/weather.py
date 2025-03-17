@@ -6,7 +6,7 @@ import time
 from datetime import datetime, date
 
 # Existing configuration
-API_KEY = "YOUR_API_TOKEN"
+API_KEY = "YOUR-TOKENs"
 UNITS = "metric"
 LANG = "de"
 MULTI_LOCATION_CACHE_FILE = "/tmp/weather_multi_cache.json"
@@ -109,9 +109,6 @@ def get_weather():
             exit(1)
 
     try:
-        # Update request count before making API call
-        update_request_count()
-
         weather_url = (
             f"https://api.openweathermap.org/data/3.0/onecall"
             f"?lat={location_info['lat']}"
@@ -125,6 +122,9 @@ def get_weather():
 
         if weather_response.status_code != 200 or 'current' not in weather_data:
             raise ValueError(f"API Error: {weather_data.get('message', 'Unknown error')}")
+
+        # Update request count before making API call
+        update_request_count()
 
         multi_cache[location_key] = {
             'data': weather_data,
