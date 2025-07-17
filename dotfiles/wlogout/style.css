@@ -38,9 +38,8 @@ button:active {
 }
 
 #hibernate {
-    margin: 10px;
-    border-radius: 20px;
-    background-image: url("/usr/share/wlogout/icons/hibernate.png");
+    border: none;
+    background: none;
 }
 
 #logout {
@@ -56,9 +55,8 @@ button:active {
 }
 
 #suspend {
-    margin: 10px;
-    border-radius: 20px;
-    background-image: url("/usr/share/wlogout/icons/suspend.png");
+    background: none;
+    border: none;
 }
 
 #reboot {
