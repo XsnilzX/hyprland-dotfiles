@@ -1,6 +1,6 @@
 # Hyperland Dotfiles
 
-Meine persönliche Hyperland-Konfiguration für ein minimalistisches und produktives Desktop-Setup.
+Meine persönliche Hyperland-Konfiguration für ein minimalistisches und produktives Desktop-Setup meines Laptops.
 
 ## 📦 Enthaltene Konfigurationen
 
@@ -8,13 +8,14 @@ Diese Repository enthält Konfigurationsdateien für:
 
 - Hyperland (Wayland Compositor)
 - Waybar (Status Bar)
-- Rofi (Application Launcher)
+- Walker (Application Launcher)
 - Ghostty (Terminal Emulator)
 - Dunst (Notification Daemon)
 - Hyprpaper (Wallpaper)
 - WLogout (Logout Menu)
 - Hypridle ()
-- Cliphist (Clipboard Manager)
+- Hyprclip (Clipboard Manager)
+- Wayshot (Screenshot tool)
 
 ## 🚀 Installation
 
@@ -33,14 +34,15 @@ cd hyperland-dotfiles
 2. Erstelle Backup deiner existierenden Konfigurationen:
 ```bash
 mkdir ~/dotfiles-backup
-cp -r ~/.config/hypr ~/.config/waybar ~/.config/rofi ~/dotfiles-backup
+cp -r ~/.config/hypr ~/.config/waybar ~/.config/walker ~/dotfiles-backup
 ```
 
 3. Kopiere die Konfigurationsdateien:
 ```bash
+cd dotfiles
 cp -r hypr ~/.config/
 cp -r waybar ~/.config/
-cp -r rofi ~/.config/
+cp -r walker ~/.config/
 # Weitere Konfigurationsdateien nach Bedarf kopieren
 ```
 
@@ -50,17 +52,18 @@ Stelle sicher, dass folgende Pakete installiert sind:
 
 - hyperland
 - waybar
-- rofi
+- walker
 - ghostty
 - dunst
 - wlogout
 - hyprpaper
 - hypridle
-- cliphist
+- hyprclip
+- wayshot
 
 Für Arch Linux:
 ```bash
-paru -S hyperland waybar rofi ghostty dunst wlogout hyprpaper cliphist
+paru -S hyperland waybar walker-bin ghostty dunst wlogout hyprpaper wayshot
 ```
 
 ## 🎨 Anpassung
@@ -69,11 +72,11 @@ Die wichtigsten Konfigurationsdateien findest du hier:
 
 - Hyperland: `~/.config/hypr/hyprland.conf`
 - Waybar: `~/.config/waybar/config`
-- Rofi: `~/.config/rofi/config`
+- Walker: `~/.config/walker/config`
 
 ## 📷 Screenshots
 
-[Hier Screenshots deines Setups einfügen]
+[Screenshots folgen]
 
 ## 🔑 Tastenkombinationen
 
@@ -81,8 +84,10 @@ Die wichtigsten Konfigurationsdateien findest du hier:
 |------------------|--------|
 | SUPER + Q    | Terminal öffnen |
 | SUPER + C        | Fenster schließen |
-| SUPER + SPACE    | Rofi starten |
+| SUPER + SPACE    | Walker starten |
 | SUPER + [1-9]    | Workspace wechseln |
+| SUPER + S    | Screenshot mit auswahl  |
+| SUPER + M    | Logout |
 | [weitere Shortcuts] |
 
 ## 🤝 Beitragen
@@ -94,7 +99,3 @@ Fühl dich frei, Issues zu erstellen oder Pull Requests einzureichen, wenn du Ve
 Dieses Projekt ist unter der GNU General Public License v3.0 (GPL-3.0) lizenziert - siehe [LICENSE](LICENSE) Datei für Details.
 
 Die vollständige Lizenz kann unter [https://www.gnu.org/licenses/gpl-3.0.en.html](https://www.gnu.org/licenses/gpl-3.0.en.html) eingesehen werden.
-
-## 💡 Inspirationen
-
-- [Liste hier andere Dotfile-Repositories oder Projekte auf, die dich inspiriert haben]
