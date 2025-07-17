@@ -1,0 +1,16 @@
+[general]
+terminal = "kitty" # oder dein Terminal: alacritty, foot, ghostty, etc.
+
+[search]
+placeholder = "Suche..."
+
+[ui]
+fullscreen = false
+font = "JetBrainsMono Nerd Font"
+font_size = 14
+dpi = 110
+
+[list]
+height = 300
+icon_size = 25
+show_icons = true

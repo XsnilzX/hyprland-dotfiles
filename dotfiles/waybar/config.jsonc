@@ -1,49 +1,36 @@
 {
   "layer": "top",
   "position": "top",
-  "height": 34,
-  "modules-left": [
-    "hyprland/workspaces",
-    "custom/separator",
-    "hyprland/window",
-  ],
+  "height": 30,
+
+  // Wir zeigen jetzt nur 3 Container-Module an
+  "modules-left": ["hyprland/workspaces"],
   "modules-center": ["clock", "custom/weather"],
-  "modules-right": [
-    "cpu",
-    "memory",
-    // "temperature",
-    "battery",
-    "backlight",
-    "pulseaudio",
-    "custom/powerprofile",
-    "custom/clipboard",
-    "custom/separator",
-    "tray",
-    "custom/exit",
+  "modules-right": 
+  [
+    "cpu", "memory", "battery", "backlight", "pulseaudio",
+    "power-profiles-daemon", "custom/hyprclip", "custom/separator",
+    "tray", "custom/exit"
   ],
   "clock": {
     "format": " {:%H:%M}",
     "tooltip": false,
   },
   "cpu": {
-    "format": " {usage}%",
+    "interval": 1,
+    "format": "{usage}%",
   },
   "memory": {
-    "format": " {used:0.1f}GB",
-  },
-  "temperature": {
-    "format": " {temperatureC}°C",
-    "thermal-zone": 0,
-    "intervall": 10,
-    "tooltip": false,
+    "interval": 2,
+    "format": "{used:0.1f}GB",
   },
   "battery": {
-    "format": "  {capacity}%",
-    "format-charging": " {capacity}%",
-    "format-plugged": " {capacity}%",
+    "format": "{capacity}%",
+    "format-charging": "{capacity}%",
+    "format-plugged": "{capacity}%",
   },
   "backlight": {
-    "format": " {percent}%",
+    "format": "{percent}%",
   },
   "custom/weather": {
     "exec": "/home/richard/.config/waybar/scripts/weather.py",
@@ -53,8 +40,8 @@
     "tooltip": true,
   },
   "pulseaudio": {
-    "format": "{icon}   {volume}%",
-    "format-bluetooth": "{volume}%  {icon} {format_source}",
+    "format": "{volume}% {icon}",
+    "format-bluetooth": "{volume}% {icon} {format_source}",
     "format-bluetooth-muted": " {icon} {format_source}",
     "format-muted": " {format_source}",
     "format-source": "{volume}% ",
@@ -72,31 +59,32 @@
   },
   "tray": {
     "spacing": 5,
-    "icon-size": 20,
+    "icon-size": 18,
     "items": ["nm-applet", "blueman-applet"],
+    "tooltip": false,
   },
   "custom/separator": {
     "format": "|",
     "tooltip": false,
   },
   "custom/exit": {
-    "format": "⏻", // oder ein anderes Symbol Ihrer Wahl
+    "format": "⏻",
     "on-click": "wlogout",
-    "tooltip-format": "Power Menu",
+    "tooltip": false,
   },
-  "custom/powerprofile": {
+  "power-profiles-daemon": {
+    "format": "{icon}",
+    "tooltip-format": "Power Profile: {icon} {profile}",
+    "format-icons": {
+      "performance": "",
+      "balanced": "",
+      "power-saver": ""
+    }
+  },
+  "custom/hyprclip": {
     "format": "{}",
-    "exec": "/home/richard/.config/waybar/scripts/powerprofile.sh",
-    "on-click": "powerprofilesctl set balanced",
-    "on-click-right": "powerprofilesctl set power-saver",
-    "on-click-middle": "powerprofilesctl set performance",
-    "tooltip": true,
-    "tooltip-format": "{}",
-    "interval": 5,
-  },
-  "custom/clipboard": {
-    "exec": "/home/richard/.config/waybar/scripts/cliphist-tray.py",
-    "on-click": "/home/richard/.config/waybar/scripts/cliphist-tray.py --click",
+    "exec": "/usr/bin/hyprclip --waybar",
+    "on-click": "/usr/bin/hyprclip --gui",
     "tooltip": true,
     "return-type": "json",
     "interval": 5,

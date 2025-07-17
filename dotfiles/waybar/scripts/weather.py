@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 import json
 import requests
 import os
@@ -6,7 +6,7 @@ import time
 from datetime import datetime, date
 
 # Existing configuration
-API_KEY = "YOUR-TOKENs"
+API_KEY = "YOUR_API_TOKEN"
 UNITS = "metric"
 LANG = "de"
 MULTI_LOCATION_CACHE_FILE = "/tmp/weather_multi_cache.json"

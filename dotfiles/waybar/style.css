@@ -1,51 +1,55 @@
-/* Allgemeines Styling */
+/* Schrift & Grundfarbe */
 * {
-    font-family: "JetBrainsMono Nerd Font";
-    font-size: 14px;
+    border: none;
+    border-radius: 0px;
+    font-family: "JetBrainsMono Nerd Font", monospace;
+    font-size: 12px;
     color: #cdd6f4;
 }
 
+/* GANZE Waybar transparent */
 window#waybar {
-    background: rgba(30, 30, 46, 0.9);
-    border-radius: 12px;
-    padding: 10px;
+    background: transparent;
 }
 
-/* Module Styling */
+.modules-left,
+.modules-center,
+.modules-right {
+  background: rgba(30, 30, 46, 0.85);
+  padding: 2px 6px;
+  margin: 2px 4.5px;
+  border-radius: 16px;
+}
+
 #clock,
+#custom-weather{
+    padding: 0 4px;
+}
+
 #cpu,
 #memory,
-#temperature,
 #network,
 #battery,
 #backlight,
-#custom-weather,
 #pulseaudio,
-#custom-exit,
-#tray {
-    padding: 0 8px;
-    background: #1e1e2e;
-    border-radius: 5px;
-    margin: 3px;
+#power-profiles-daemon,
+#custom-hyprclip{
+    padding: 0 6px;
 }
 
-#clock:hover,
-#cpu:hover,
-#memory:hover,
-#temperature:hover,
-#network:hover,
-#battery:hover,
-#backlight:hover,
-#custom-weather:hover,
-#custom-exit:hover,
-#pulseaudio:hover,
-#tray:hover {
-    background: #2b2b3b;
+
+/* Wetter Tooltip (wie gehabt) */
+tooltip {
+    background: #1e1e2e;
+    border-radius: 8px;
+    padding: 8px;
+    font-size: 13px;
+    color: #cdd6f4;
+    opacity: 0.9;
 }
 
 #custom-weather {
-    font-size: 16px;
-    margin: 0 10px;
+    font-size: 14px;
 }
 
 /* Wetter Widget Farben je nach Wetterlage */
@@ -80,25 +84,18 @@ window#waybar {
     color: #dbd9d8; /* Standardfarbe */
 }
 
-/* Wetter Tooltip */
-tooltip {
-    background: #1e1e2e;
-    border-radius: 8px;
-    padding: 8px;
-    font-size: 13px;
-    color: #cdd6f4;
-    opacity: 0.9;
-}
-
 /* Separator */
 #custom-separator {
     color: #585b70;
     font-size: 16px;
-    padding: 0 3px;
+}
+
+#tray,
+#custom-exit{
+    padding: 0 4px;
 }
 
 #custom-exit {
     font-family: "Font Awesome 6 Free";
-    padding-right: 10px;
     color: #f53c3c;
 }
