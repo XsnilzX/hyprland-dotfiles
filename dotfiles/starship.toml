@@ -1,0 +1,73 @@
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# Inserts a blank line between shell prompts
+add_newline = true
+
+# Starship prompt configuration
+
+format = """
+$username$hostname$directory$git_branch$git_status$nodejs$rust$python$golang$docker_context$kubernetes$package$conda$time
+$character"""
+
+# Prompt elements
+[username]
+show_always = false
+style_user = "bold green"
+style_root = "bold red"
+
+[hostname]
+ssh_only = true
+style = "bold dimmed blue"
+
+[directory]
+truncation_length = 3
+truncate_to_repo = false
+style = "bold cyan"
+read_only = "🔒"
+read_only_style = "red"
+
+[git_branch]
+format = "on [$symbol$branch]($style) "
+style = "bold purple"
+
+[git_status]
+format = '([\[$all_status$ahead_behind\]]($style) )'
+style = "yellow"
+
+[nodejs]
+format = "via [⬢ $version](bold green) "
+
+[rust]
+format = "via [🦀 $version](red) "
+
+[python]
+format = 'via [🐍 $version]($style) '
+style = "bold yellow"
+
+[golang]
+format = 'via [Go $version](bold cyan) '
+
+[docker_context]
+format = 'via [🐳 $context](blue bold) '
+
+[kubernetes]
+format = 'on [⎈ $context/$namespace](cyan bold) '
+
+[package]
+format = "is [📦 $version](208 bold) "
+
+[conda]
+format = 'via [🅒 $environment](green) '
+
+[time]
+disabled = false
+time_format = "%H:%M"
+format = '🕙 [$time](dimmed white) '
+utc_time_offset = "+2"
+style = "bold white"
+
+[character]
+success_symbol = "[❯](bold green)"
+error_symbol = "[❯](bold red)"
+vicmd_symbol = "[❮](bold yellow)"

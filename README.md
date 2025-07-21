@@ -14,8 +14,9 @@ Diese Repository enthält Konfigurationsdateien für:
 - Hyprpaper (Wallpaper)
 - WLogout (Logout Menu)
 - Hypridle ()
-- Hyprclip (Clipboard Manager)
+- (Hyprclip (Clipboard Manager)) work in progress
 - Wayshot (Screenshot tool)
+- Starship (Shell)
 
 ## 🚀 Installation
 
@@ -50,7 +51,7 @@ cp -r walker ~/.config/
 
 Stelle sicher, dass folgende Pakete installiert sind:
 
-- hyperland
+- hyprland
 - waybar
 - walker
 - ghostty
@@ -60,17 +61,21 @@ Stelle sicher, dass folgende Pakete installiert sind:
 - hypridle
 - hyprclip
 - wayshot
+- thunar
+- vscodium
+- brightnessctl
+- Starship
 
 Für Arch Linux:
 ```bash
-paru -S hyperland waybar walker-bin ghostty dunst wlogout hyprpaper wayshot
+paru -S hyprland waybar walker-bin ghostty dunst wlogout hyprpaper wayshot brightnessctl vscodium-bin thunar starship kvantum kvantum-qt5 
 ```
 
 ## 🎨 Anpassung
 
 Die wichtigsten Konfigurationsdateien findest du hier:
 
-- Hyperland: `~/.config/hypr/hyprland.conf`
+- Hyprland: `~/.config/hypr/hyprland.conf`
 - Waybar: `~/.config/waybar/config`
 - Walker: `~/.config/walker/config`
 
@@ -83,7 +88,7 @@ Die wichtigsten Konfigurationsdateien findest du hier:
 | Tastenkombination | Aktion |
 |------------------|--------|
 | SUPER + Q    | Terminal öffnen |
-| SUPER + C        | Fenster schließen |
+| SUPER + X        | Fenster schließen |
 | SUPER + SPACE    | Walker starten |
 | SUPER + [1-9]    | Workspace wechseln |
 | SUPER + S    | Screenshot mit auswahl  |

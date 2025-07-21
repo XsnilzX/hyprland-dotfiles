@@ -2,14 +2,12 @@
   "layer": "top",
   "position": "top",
   "height": 30,
-
-  // Wir zeigen jetzt nur 3 Container-Module an
   "modules-left": ["hyprland/workspaces"],
   "modules-center": ["clock", "custom/weather"],
   "modules-right": 
   [
     "cpu", "memory", "battery", "backlight", "pulseaudio",
-    "power-profiles-daemon", "custom/hyprclip", "custom/separator",
+    "power-profiles-daemon", /*"custom/hyprclip",*/ "custom/separator",
     "tray", "custom/exit"
   ],
   "clock": {
@@ -33,7 +31,7 @@
     "format": "{percent}%",
   },
   "custom/weather": {
-    "exec": "/home/richard/.config/waybar/scripts/weather.py",
+    "exec": "/home/xsnilzx/.config/waybar/scripts/weather.py",
     "return-type": "json",
     "interval": 120, // alle 2 Minuten aktualisieren
     "format": "{}",
@@ -81,6 +79,7 @@
       "power-saver": ""
     }
   },
+  /*
   "custom/hyprclip": {
     "format": "{}",
     "exec": "/usr/bin/hyprclip --waybar",
@@ -89,4 +88,5 @@
     "return-type": "json",
     "interval": 5,
   },
+  */
 }
