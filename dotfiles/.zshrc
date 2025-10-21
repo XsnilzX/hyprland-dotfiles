@@ -73,6 +73,7 @@ zinit light rupa/z
 
 # ===== Starship Prompt =====
 eval "$(starship init zsh)"
+eval "$(zoxide init zsh)"
 
 # ===== Aliases (Beispiel) =====
 alias ll='ls -alh --color=auto'
