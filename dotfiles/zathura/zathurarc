@@ -21,6 +21,8 @@ set font "sans 10"
 # Standardmäßig nutzt Zathura:
 # Pfeiltasten     → scrollen
 # PageUp/PageDown → seitenweise scrollen
+map <Left> scroll full-up
+map <Right> scroll full-down
 # Home/End        → Anfang / Ende
 # + / - / =       → Zoom in/out/fit
 # /               → Suche starten

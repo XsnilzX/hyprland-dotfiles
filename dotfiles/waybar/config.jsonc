@@ -2,12 +2,14 @@
   "layer": "top",
   "position": "top",
   "height": 30,
+
+  // Wir zeigen jetzt nur 3 Container-Module an
   "modules-left": ["hyprland/workspaces"],
   "modules-center": ["clock", "custom/weather"],
   "modules-right": 
   [
     "cpu", "memory", "battery", "backlight", "pulseaudio",
-    "power-profiles-daemon", /*"custom/hyprclip",*/ "custom/separator",
+    "power-profiles-daemon", "custom/notification", "custom/separator",
     "tray", "custom/exit"
   ],
   "clock": {
@@ -31,29 +33,29 @@
     "format": "{percent}%",
   },
   "custom/weather": {
-    "exec": "/home/xsnilzx/.config/waybar/scripts/weather.py",
+    "exec": "uv run --directory=/home/xsnilzx/Git/weather-widget main.py",
     "return-type": "json",
     "interval": 120, // alle 2 Minuten aktualisieren
     "format": "{}",
     "tooltip": true,
   },
   "pulseaudio": {
-    "format": "{volume}% {icon}",
-    "format-bluetooth": "{volume}% {icon} {format_source}",
-    "format-bluetooth-muted": " {icon} {format_source}",
+    "format": "{volume}% {icon} {format_source}",
     "format-muted": " {format_source}",
     "format-source": "{volume}% ",
     "format-source-muted": "",
+    "format-bluetooth": "{volume}% {icon} {format_source}",
+    "format-bluetooth-muted": " {icon} {format_source}",
     "format-icons": {
-      "headphone": " ",
-      "hands-free": " ",
-      "headset": " ",
-      "phone": "📱 ",
-      "portable": "📱 ",
-      "car": "🚗 ",
-      "default": [" ", " ", " "],
+      "default": ["", "", ""],
+      "headphone": "",
+      "headset": "",
+      "hands-free": "",
+      "phone": "",
+      "portable": "",
+      "car": ""
     },
-    "on-click": "pavucontrol",
+    "on-click": "pavucontrol"
   },
   "tray": {
     "spacing": 5,
@@ -79,14 +81,24 @@
       "power-saver": ""
     }
   },
-  /*
-  "custom/hyprclip": {
-    "format": "{}",
-    "exec": "/usr/bin/hyprclip --waybar",
-    "on-click": "/usr/bin/hyprclip --gui",
-    "tooltip": true,
+  "custom/notification": {
+    "tooltip": false,
+    "format": "{icon}",
+    "format-icons": {
+      "notification": "<span foreground='red'><sup></sup></span>",
+      "none": "",
+      "dnd-notification": "<span foreground='red'><sup></sup></span>",
+      "dnd-none": "",
+      "inhibited-notification": "<span foreground='red'><sup></sup></span>",
+      "inhibited-none": "",
+      "dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
+      "dnd-inhibited-none": ""
+    },
     "return-type": "json",
-    "interval": 5,
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true
   },
-  */
 }
