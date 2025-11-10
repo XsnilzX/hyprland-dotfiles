@@ -10,14 +10,14 @@ progress_bar = true
 # Transparenz & Farben
 transparency = 10
 frame_width = 2
-frame_radius = 10   # Abgerundete Ecken
+frame_radius = 20   # Abgerundete Ecken
 frame_color = "#585b70"  # Separator-Farbe aus Waybar
 separator_color = "#585b70"
 padding = 8
 horizontal_padding = 16
 
 # Schriftart
-font = "JetBrainsMono Nerd Font 14"
+font = "JetBrainsMono Nerd Font 13"
 
 # Standard-Icons
 icon_path = /usr/share/icons/

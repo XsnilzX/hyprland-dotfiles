@@ -46,7 +46,11 @@ zinit light zsh-users/zsh-history-substring-search
 
 # ===== Prompt =====
 eval "$(starship init zsh)"
+<<<<<<< HEAD
 # (Aktiviere in ~/.config/starship.toml das Modul `cmd_duration`)
+=======
+eval "$(zoxide init zsh)"
+>>>>>>> fdbf242f8847ce5c3307c0b9223e935c728e67a1
 
 # ===== Completion (nach Plugins!) =====
 zmodload zsh/complist

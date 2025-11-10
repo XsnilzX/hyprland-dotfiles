@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # Konfigurationsvariablen
-WALLPAPER_DIR="/home/richard/Bilder/Wallpaper"  # Passe den Pfad an
+WALLPAPER_DIR="/home/xsnilzx/Bilder/Wallpaper"  # Passe den Pfad an
 INTERVAL=300  # Zeit in Sekunden (300 = 5 Minuten)
 MONITOR="eDP-1"  # Setze hier deinen Monitor-Namen (z.B. "DP-1", "HDMI-A-1", etc.)
-echo "PID: $$ Script: /home/richard/.config/hypr/scripts/wallpaper-cycle.sh" > /tmp/wallpaperscript.txt
+echo "PID: $$ Script: /home/xsnilzx/.config/hypr/scripts/wallpaper-cycle.sh" > /tmp/wallpaperscript.txt
 
 
 # Prüfe ob der Wallpaper-Ordner existiert

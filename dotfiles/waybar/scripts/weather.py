@@ -6,7 +6,7 @@ import time
 from datetime import datetime, date
 
 # Existing configuration
-API_KEY = "YOUR_API_TOKEN"
+API_KEY = "YOUR-API-TOKEN"
 UNITS = "metric"
 LANG = "de"
 MULTI_LOCATION_CACHE_FILE = "/tmp/weather_multi_cache.json"
